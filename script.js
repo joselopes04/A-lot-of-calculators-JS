@@ -11,7 +11,10 @@ function calculate() {
 
     if (expr == "") {
         alert("Introduza valores");
-    }else if(expr.includes("~")){
+    }else if(expr.includes("^")){
+        conjunction(expr)
+    }
+    else if(expr.includes("~")){
         denial(expr)
     }
 }
@@ -33,4 +36,13 @@ function denial(expr) {
     }
 }
 
-//Provabelmente vamos mudar de abordagem qnd tivermos as prioridades a funcionar
+// A conjunctionExpr isola a parte da string da conjunção ex: V^F
+//Para uma conjunção ser falsa basta incluir um falso 
+function conjunction(expr){
+    conjunctionExpr = expr.substring(expr.indexOf("^") + -1, expr.lastIndexOf("^")+2);
+     if(conjunctionExpr.includes("F")){
+        alert("F")
+     }else{
+        alert("V")
+    }
+}
