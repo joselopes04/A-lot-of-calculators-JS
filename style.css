@@ -3,11 +3,3 @@
         left: 50%;
         transform: translate(-50%);
 }
-#resultado{
-        width: 350px;
-        border: 1px;
-        border-color: black;
-        background-color: #fff;
-        color: black;
-        font-size: 25px;
-}
